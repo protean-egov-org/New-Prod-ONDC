@@ -13,7 +13,7 @@ This tool is designed to help the network participants in Onboarding process.   
 
 ### Option 2 to use as Jar file
 
-## HOW TO USE ONDC ONBOARDING CLI TOOL
+### HOW TO USE ONDC ONBOARDING CLI TOOL
 
 Steps --
 
