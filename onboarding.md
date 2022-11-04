@@ -1,4 +1,4 @@
-#   ONDC ONBOARDING CLI TOOL
+##   ONDC ONBOARDING CLI TOOL
 
 * This utility has been tested on Win 10 and Suse Enterprise 11 (JRE 16 and 18) 
 * Pre-requisite for this utility is to have Java Runtime Environment
