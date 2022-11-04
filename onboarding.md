@@ -7,11 +7,11 @@
 This tool is designed to help the network participants in Onboarding process.   This covers step 7 to step 11 from [Onboarding Document](https://github.com/ONDC-Official/developer-docs/blob/main/registry/Onboarding%20of%20Participants.md).  It is a java jar file which takes ``subscriber_id`` as input from the user and generates the ``signing keys``, ``encryption keys``, ``request_id`` and signs request id and creates ``ondc-site-verification.html`` programmatically.  All will be stored in different files.  This utility is compatible for windows platform as well unix platform.
 
 
-### Option 1 to run it as a Docker container
+### Option 1 to use as a Docker container
 
 `docker run -p 8001:9001 -it proteantech/ondc-onboarding:v1.0`
 
-### Option 2 to run it as Jar file
+### Option 2 to use as Jar file
 
 ## HOW TO USE ONDC ONBOARDING CLI TOOL
 
