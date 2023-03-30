@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "cf9e0587-720b-4192-bdc3-8ea6febbc2e6",
+		"name": "Crypto V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20106488"
+	},
+	"item": [
+		{
+			"name": "Generate Key Pair for Signing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/crypto/signature/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"signature",
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Request ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestData\": \"b4963e85-47c4-41b1-94ab-6f3acc490f4d\",\r\n   \t\t\"clientPrivateKey\":\"2Tl+ZNco20HIPlq5plOwwQ58lZtRzIcKjUJgRandUv4=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/crypto/signature/generate/onboarding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"signature",
+						"generate",
+						"onboarding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Request ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestData\": \"b4963e85-47c4-41b1-94ab-6f3acc490f4d\",\r\n    \"clientPublicKey\": \"3XziU7iTSrR1ukU9HSmjfZy4cFtOPqVAltudRKoNc1Y=\",\r\n    \"sign\": \"xTWdm2Rz+7zes6mztY0ZzuUUK+wQRrcve3V1uNURkSaxCjsB2BjB7ridKxSf1T9yk1JPcBU8HbEJydxXsS7IDw==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/crypto/signature/verify/onboarding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"signature",
+						"verify",
+						"onboarding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Key Pair for Encryption and Decryption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/crypto/encrypt/decrypt/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"encrypt",
+						"decrypt",
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encrypt Challenge String",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"ONDC is awesome !\",\r\n        \"clientPrivateKey\": \"MC4CAQAwBQYDK2VuBCIEIKn1K/j+lkJEqm8ndtZLveOMQQU8W/ofmMBBsyXra17O\",\r\n       \"proteanPublicKey\": \"MCowBQYDK2VuAyEAIKHaVmBRZ0fkZLofpZNGO2a7BZeVyT+1my0D5HvvkgA=\",\r\n       \"algo\":\"CTR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/crypto/encrypt/text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"encrypt",
+						"text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt Challenge String",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"MdR+sdNMQFZMIjydmUDz/0hetntDb5pdc4JetDMVDs4=\",\r\n    \"clientPublicKey\": \"MCowBQYDK2VuAyEAHJgKtHSiuEnQEKddIZHXToFO/mRymOccJi2buwG8ems=\",\r\n    \"proteanPrivateKey\": \"MC4CAQAwBQYDK2VuBCIEIKmBTOiMe2Ifg3teX0A6y58xuCjd4X3DAcP9SZvFntIb\",\r\n    \"algo\": \"CTR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/crypto/decrypt/text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"decrypt",
+						"text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OCSP Verification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"domain\": \"https://expired.badssl.com/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/crypto/ocsp/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"crypto",
+						"ocsp",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
