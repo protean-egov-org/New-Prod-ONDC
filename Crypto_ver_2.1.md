@@ -8,7 +8,7 @@ Specifically shared to assist in Onboarding of Network Participants in ONDC
 
 ### Use below postman collection to execute the same 
 
-Download [Postman Collection](/sign-encrypt/ondc-sign-encrypt.jar)
+Download [Postman Collection](Crypto V2.postman_collection.json)
 
 * Generate Signing Keys
 * Generate Encryption Keys
