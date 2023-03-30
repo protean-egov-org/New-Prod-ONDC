@@ -9,7 +9,19 @@ Specifically shared to assist in Onboarding of Network Participants in ONDC
 ### Use below postman collection to execute the same 
 
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://github.com/protean-egov-org/New-Prod-ONDC/blob/main/sign-encrypt/Crypto%20V2.postman_collection.json)
+<div class="postman-run-button"
+data-postman-action="collection/fork"
+data-postman-var-1="21537714-5c85c5b7-09b9-4e50-ab39-000ee78f91e6"
+data-postman-collection-url="entityId=21537714-5c85c5b7-09b9-4e50-ab39-000ee78f91e6&entityType=collection&workspaceId=53a76419-024e-450d-a188-c32507739a55"></div>
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
 
 * Generate Signing Keys
 * Generate Encryption Keys
