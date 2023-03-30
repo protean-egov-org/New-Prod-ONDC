@@ -5,7 +5,7 @@ Specifically shared to assist in Onboarding of Network Participants in ONDC
 ``docker run -d -p 9001:9001 --name sign proteantech/sign-encrypt:75b90a5-0.0.1-v2 com.nsdl.signing.DemoApplication``
 
 ### Option 2 to use it as jar 
-Download [jar](/sign-encrypt/ondc-sign-encrypt.jar) and execute it as ```java -Dserver.port=8000 -jar ondc-sign-encrypt.jar ```
+Download [jar](/sign-encrypt/ondc-sign-encrypt.jar) and execute it as ```java -Dserver.port=8000 -jar beckn-sign-encrypt-0.0.1 ```
 
 ### Use below postman collection to execute the same 
 
